@@ -89,6 +89,7 @@ const InfoFooter = (): JSX.Element => {
             className="text-xs md:text-sm transition-colors hover:text-blue-200 font-semibold"
             href="https://www.shambhala.eu.com "
             aria-label="Connect with us"
+            target="_blank"
           >
             {text[6][language]}
           </a>
