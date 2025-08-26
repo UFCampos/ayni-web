@@ -90,6 +90,7 @@ const InfoFooter = (): JSX.Element => {
             href="https://www.shambhala.eu.com "
             aria-label="Connect with us"
             target="_blank"
+            rel="noreferrer"
           >
             {text[6][language]}
           </a>
