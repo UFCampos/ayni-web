@@ -41,13 +41,15 @@ const Home = (): React.JSX.Element => {
       <section className='p-2 my-4 z-10 w-full '>
         <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full' >
           <InfoPresale />
-          {endsale ? <ClaimSteps /> : (
+            {endsale
+              ? <ClaimSteps />
+              : (
             <section className='bg-background/50 self-center border border-border-secondary rounded-3xl xl:-ml-20 flex flex-col mx-0 w-full md:w-[500px] xl:w-11/12 py-4'>
               <PresaleCountdown />
               <InfoPhase />
               <BuyInfo />
             </section>
-          )}
+                )}
         </div>
       </section>
       <BinanceWidget />
