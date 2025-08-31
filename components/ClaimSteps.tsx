@@ -51,15 +51,11 @@ const ClaimSteps = (): JSX.Element => {
     }
   }
   return (
-    <div className="flex flex-col backdrop-blur justify-self-center bg-background/80 border shadow-sm rounded-3xl lg:w-3/4 w-full">
-        <div className="h-16 flex items-center justify-center align-top rounded-3xl rounded-b-none w-full bg-azure-radiance-600 place-items-center">
-          <p className="text-xl sm:text-2xl font-bold">{text[1][language]}</p>
-        </div>
-      <div className='py-4'>
-        <div className="flex gap-2 place-items-center">
-          <div className='flex flex-row gap-1 pt-2'>
+    <div className="flex place-items-center flex-col shadow-inner bg-background/50 self-center border border-spacing-0 border-border-secondary rounded-[18px] xl:-ml-20 mx-0 w-full md:w-[500px] xl:w-11/12">
+          <p className="h-16 rounded-[16px] pt-4 rounded-b-none w-full bg-azure-radiance-600 text-xl sm:text-2xl font-bold text-center">{text[1][language]}</p>
+          <div className='flex flex-row self-start pl-6 gap-12 pt-2 place-items-center'>
             <CheckboxWithLine isConnected={isConnected} balanceOf={balanceOf ?? 0 } />
-            <div className='flex h-full flex-col gap-10  pt-2'>
+            <div className='flex h-full flex-col gap-10 pt-2 text-lg'>
               <div className='flex flex-col gap-2'>
                 <p className='text-md text-blue-500 font-bold'>{text[2][language]}</p>
                 <p className='text-gray-500 text-xs'>{text[3][language]}</p>
@@ -68,7 +64,7 @@ const ClaimSteps = (): JSX.Element => {
               <div className='flex flex-col gap-1'>
                   <p className='text-md text-blue-500 font-bold'>{text[4][language]}</p>
                   <p className='text-gray-500 text-xs'>{text[5][language]}</p>
-                  <div className='w-44 overflow-hidden border flex border-sky-500 rounded-2xl pl-3 items-center gap-2'>
+                  <div className='w-44 overflow-hidden border flex border-sky-500 rounded-2xl py-1 pl-3 items-center gap-2'>
                       <Image className='flex' src='/logo.png' alt='logo' width={30} height={30}></Image>
                       <BalanceOf isDisconnected={isDisconnected} balance={balanceOf} setBalanceOf={setBalanceOf}/>
                   </div>
@@ -79,9 +75,7 @@ const ClaimSteps = (): JSX.Element => {
                     <ClaimTokens boolean={balanceOf !== null && balanceOf > 0}/>
                 </div>
             </div>
-          </div>
         </div>
-      </div>
 
     </div>
   )

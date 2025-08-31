@@ -37,37 +37,38 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'))
 const Home = (): React.JSX.Element => {
   const endsale = saleEnded()
   return (
-        <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen overflow-x-hidden '>
-            <section className='p-2 my-4 z-10 w-full '>
-                  <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full' >
-                      <InfoPresale/>
-                      {endsale && <ClaimSteps/>}
-                      {!endsale && <section className='bg-background/50 self-center border border-border-secondary rounded-3xl xl:-ml-20 flex flex-col mx-0 w-full md:w-[500px] xl:w-11/12 py-4'>
-                        <PresaleCountdown/>
-                        <InfoPhase/>
-                        <BuyInfo/>
-                      </section>}
-                  </div>
+    <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen overflow-x-hidden '>
+      <section className='p-2 my-4 z-10 w-full '>
+        <div className='flex xl:grid grid-cols-3 flex-col place-items-start items-center gap-4 w-full' >
+          <InfoPresale />
+          {endsale ? <ClaimSteps /> : (
+            <section className='bg-background/50 self-center border border-border-secondary rounded-3xl xl:-ml-20 flex flex-col mx-0 w-full md:w-[500px] xl:w-11/12 py-4'>
+              <PresaleCountdown />
+              <InfoPhase />
+              <BuyInfo />
             </section>
-            <BinanceWidget/>
-            <Diagram/>
-            <Sectors/>
-            {/* <InfoCard/> */}
-            {/* <ItemCarousel/> */}
-            {/* <Ecosystem/> */}
-            <Projects/>
-            <Marketplace/>
-            <Sales/>
-            <Fractional/>
-            <Passport/>
-            <Tokenomics/>
-            <Roadmap/>
-            <Video/>
-            <Partners/>
-            <InfoContent/>
-            {/* <Dividends/> */}
-            {/* <CardTeamWorkList /> */}
-        </main>
+          )}
+        </div>
+      </section>
+      <BinanceWidget />
+      <Diagram />
+      <Sectors />
+      {/* <InfoCard/> */}
+      {/* <ItemCarousel/> */}
+      {/* <Ecosystem/> */}
+      <Projects />
+      <Marketplace />
+      <Sales />
+      <Fractional />
+      <Passport />
+      <Tokenomics />
+      <Roadmap />
+      <Video />
+      <Partners />
+      <InfoContent />
+      {/* <Dividends/> */}
+      {/* <CardTeamWorkList /> */}
+    </main>
   )
 }
 
