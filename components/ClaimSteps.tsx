@@ -51,12 +51,12 @@ const ClaimSteps = (): JSX.Element => {
     }
   }
   return (
-    <div className="flex place-items-center flex-col shadow-inner bg-background/50 self-center border border-spacing-0 border-border-secondary rounded-[18px] xl:-ml-20 mx-0 w-full md:w-[500px] xl:w-11/12">
+    <div className="flex place-items-center flex-col shadow-inner bg-background/50 self-center border border-spacing-0 border-border-secondary rounded-[18px] xl:-ml-20 mx-0 w-full md:w-[500px] xl:w-[85%]">
           <p className="h-16 rounded-[16px] pt-4 rounded-b-none w-full bg-azure-radiance-600 text-xl sm:text-2xl font-bold text-center">{text[1][language]}</p>
-          <div className='flex flex-row self-start pl-6 gap-12 pt-2 place-items-center'>
+          <div className='flex flex-row self-start pl-5 gap-10 pt-2 place-items-center'>
             <CheckboxWithLine isConnected={isConnected} balanceOf={balanceOf ?? 0 } />
             <div className='flex h-full flex-col gap-10 pt-2 text-lg'>
-              <div className='flex flex-col gap-2'>
+              <div className='flex flex-col gap-1'>
                 <p className='text-md text-blue-500 font-bold'>{text[2][language]}</p>
                 <p className='text-gray-500 text-xs'>{text[3][language]}</p>
                 <ConnectButton label='Connect wallet' showBalance={false} accountStatus="address"></ConnectButton>
@@ -69,7 +69,7 @@ const ClaimSteps = (): JSX.Element => {
                       <BalanceOf isDisconnected={isDisconnected} balance={balanceOf} setBalanceOf={setBalanceOf}/>
                   </div>
               </div>
-              <div className='w-full'>
+              <div className=' flex flex-col gap-1 pb-2 max-w-['>
                     <p className='text-md text-blue-500 font-bold'>{text[6][language]}</p>
                     <p className='text-gray-500 text-xs'>{text[7][language]}</p>
                     <ClaimTokens boolean={balanceOf !== null && balanceOf > 0}/>

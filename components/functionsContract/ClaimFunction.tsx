@@ -36,9 +36,8 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
   }
 
   return (
-      <div className='flex flex-row items-start p-3  w-full'>
         <ButtonUI
-          className='uppercase w-3/4 bg-sky-500 rounded-2xl border-none text-white'
+          className='uppercase w-11/12 bg-sky-500 rounded-2xl border-none text-white'
           variant={'outline'}
           disabled={!boolean}
           onClick={() => {
@@ -48,7 +47,6 @@ const ClaimTokens = ({ boolean }: { boolean: boolean }): JSX.Element => {
         >
           {text[1][language]}
         </ButtonUI>
-      </div>
   )
 }
 
