@@ -17,7 +17,7 @@ import { Passport } from '@/components/Passport'
 import { Roadmap } from '@/components/Roadmap'
 import { Tokenomics } from '@/components/Tokenomics'
 import { Marketplace } from '@/components/Marketplace'
-//import { saleEnded } from '@/utils/endSale'
+// import { saleEnded } from '@/utils/endSale'
 import Video from '@/components/Video'
 import Diagram from '@/components/Diagram'
 import Sectors from '@/components/Sectors'
@@ -35,7 +35,7 @@ const BuyInfo = dynamic(async () => await import('@/components/BuyInfo'))
 // const shouldRenderProgressBar = currentDate < stopRenderingDate
 
 const Home = (): React.JSX.Element => {
-  //const endsale = saleEnded()
+  // const endsale = saleEnded()
   return (
     <main className='flex flex-col gap-64 pt-8 mt-10 px-8 justify-center items-center w-screen overflow-x-hidden '>
       <section className='p-2 my-4 z-10 w-full '>
